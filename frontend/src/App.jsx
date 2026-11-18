@@ -2,6 +2,7 @@
 import Header from "./components/Header.jsx";
 import Sidebar from "./components/Sidebar.jsx";
 import Footer from "./components/Footer.jsx";
+import PostsSection from "./components/PostsSection.jsx";
 import "./App.css";
 
 function App() {
@@ -25,8 +26,11 @@ function App() {
               Stay connected with people, share your
               thoughts, and discover new ideas.
             </p>
-          </section>
-        </main>
+        </section>
+
+        <PostsSection />
+
+      </main>
       </div>
 
       <Footer />
