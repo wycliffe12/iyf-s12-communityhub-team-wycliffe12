@@ -155,3 +155,11 @@ vite.config.ts.timestamp-*
 .nx/cache
 .nx/workspace-data
 .nx/migrate-runs
+
+
+node_modules/
+dist/
+.env
+.env.local
+.DS_Store
+coverage/
