@@ -6,6 +6,7 @@
 - CommunityHub frontend setup
 - Build CommunityHub shared layout and utility tests
 - Integrate Posts Feature into CommunityHub Layout
+- Week 9 React Router and Custom Hooks Foundation
 
 **Pull Requests Reviewed**
 - Justin's Posts Feature PR (#7)
