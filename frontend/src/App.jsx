@@ -1,39 +1,23 @@
 
-import Header from "./components/Header.jsx";
-import Sidebar from "./components/Sidebar.jsx";
-import Footer from "./components/Footer.jsx";
-import PostsSection from "./components/PostsSection.jsx";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Home from "./pages/Home.jsx";
+import Posts from "./pages/Posts.jsx";
+import PostDetail from "./pages/PostDetail.jsx";
+import CreatePost from "./pages/CreatePost.jsx";
+import About from "./pages/About.jsx";
 import "./App.css";
 
 function App() {
   return (
     <div className="app">
-      <Header />
-
-      <div className="app-layout">
-        <Sidebar />
-
-        <main className="main-content">
-          <h1>Welcome to CommunityHub</h1>
-          <p>
-            Connect, share ideas, and grow together
-            with your community.
-          </p>
-
-          <section className="welcome-section">
-            <h2>What's happening in your community?</h2>
-            <p>
-              Stay connected with people, share your
-              thoughts, and discover new ideas.
-            </p>
-        </section>
-
-        <PostsSection />
-
-      </main>
-      </div>
-
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/posts" element={<Posts />} />
+        <Route path="/posts/:id" element={<PostDetail />} />
+        <Route path="/create-post" element={<CreatePost />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
     </div>
   );
 }
